@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/responsive.css">
+    <link rel="stylesheet" href="stylesheets/star.css">
+    <script src="https://kit.fontawesome.com/59278bfb8b.js" crossorigin="anonymous"></script>   <!--Logos-->
+    <script src="https://unpkg.com/scrollreveal"></script>  <!--Scroll reveal animation-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>  <!--Typing animation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <!--Custom JavaScript file is loaded at the end of the page.-->
+</head>
+
+<body>
+    <!--Header Section-->
+    <div class="fixed-bg header">
+        <div id="header">
+            <div class="container">
+                <header class="head">
+                    <nav>
+                        <img src="images/Logo.webp" class="logo">
+                        <ul id="sidemenu">
+                            <li><a href="#header">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#domains">Domains</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#certifications">Certifications</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                        </ul>
+                        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    </nav>
+                </header>
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>         
+                <div class="header-text">
+                    <h1>Vivian Henry Paul</h1>
+                    <h4><span class="multiple-lines-animation"></span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--About Section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about_me.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="titles">About Me</h1>
+                    <p><br>
+                        Hello! I am a recent graduate with a strong background in both data analysis and software development. 
+                        With a Master's degree in Computer & Information Science, I possess a solid foundation in object-oriented 
+                        programming, software quality assurance, database management, big data analytics, and machine learning.
+                        <br><br>
+                        My passion lies in transforming raw data into actionable insights by employing ETL, data visualization, and 
+                        machine learning to extract meaningful patterns from complex datasets, thereby making data-driven decisions 
+                        that impact business outcomes. In addition to my data analysis skills, I am a proficient software developer with 
+                        experience using a combination of backend, frontend, and database technologies to create high-impact solutions for various domains.
+                        <br><br>
+                        I previously worked as a Project Engineer for the Digital Technologies division at Blue Rhine Industries. 
+                        During my tenure, I led cross-functional teams while developing 10+ advanced customer experiences, implemented 
+                        data analytics for user engagement tracking, and reduced outsourcing costs by spearheading in-house software development.
+                        <br><br>
+                        As we witness the ever-growing integration of businesses and information technology, I am committed to leveraging my expertise in order 
+                        to bridge the gap between technology and business effectively.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <div class="skills-list">
+                            <div>
+                                <h2>Programming Langauges</h2>
+                                <h4>Python, C, C++, SQL</h4>
+                            </div>
+                            <div>
+                                <h2>Web</h2>
+                                <h4>HTML, CSS3, JavaScript, Bootstrap, PHP</h4>
+                            </div>
+                            <div>
+                                <h2>Analytics and ML</h2>
+                                <h4>NumPy, Pandas, Scikit-learn, NLTK, TensorFlow, Keras, OpenCV</h4>
+                            </div>
+                            <div>
+                                <h2>Database Tools</h2>
+                                <h4>MySQL, SQLite, Oracle Database, Microsoft SQL Server, MongoDB</h4>
+                            </div>
+                            <div>
+                                <h2>Visualization Tools</h2>
+                                <h4>Tableau, Matplotlib, Seaborn, Plotly</h4>
+                            </div>
+                            <div>
+                                <h2>DevOps Tools</h2>
+                                <h4>Git, Selenium</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <div class="education-list">
+                            <div>
+                                <img src="images/Purdue.png">
+                                <h2>Master of Science in Computer and Information Science</h2>
+                                <h4>2021 - 2023</h4>
+                            </div>
+                            <div>
+                                <img src="images/AUS.jpeg">
+                                <h2>Bachelor of Science in Mechanical Engineering</h2>
+                                <h4>2016 - 2020</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Domains Section-->
+    <div id="domains">
+        <div class="container">
+            <h1 class="titles">Domains</h1>
+            <div class="domains-list">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h2>Data Analysis</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Software Development</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gears"></i>
+                    <h2>Product Development</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-bars-progress"></i>
+                    <h2>Project Management</h2>
+                    <!--Use <p> for additional text, if required.-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Experience Section-->
+    <div id="experience">
+        <div class="container">
+            <h1 class="titles">Experience</h1>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h2>Data Analyst Intern</h2>
+                        <h3>Coders Data LLC</h3>
+                        <h4>August, 2023 - Present</h4>
+                        <p>
+                            Utilized Python (NumPy, Pandas, Plotly, Scikit-Learn) alongside Excel and Tableau to craft 10+ insightful 
+                            reports on customer behavior and market insights, driving a 25% enhancement in decision-making. Optimized 2 
+                            databases with MySQL, reducing customer pricing by ~15%. Conducted data mining, statistical analysis, and built 
+                            predictive models for 5 stakeholders, fostering informed strategic decisions.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h2>Graduate Teaching Assistant</h2>
+                        <h3>Purdue University</h3>
+                        <h4>January, 2023 - May, 2023</h4>
+                        <p>
+                            Served as a Graduate Teaching Assistant for a rigorous graduate-level Cloud Computing course, engaging over 40 
+                            students. Managed grading for assignments and exams, aligning evaluations with prescribed rubrics, while also 
+                            overseeing the maintenance of the course database.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h2>Project Engineer - Digital Technologies</h2>
+                        <h3>Blue Rhine Industries</h3>
+                        <h4>December, 2020 - July, 2021</h4>
+                        <p>
+                            Led cross-functional teams to deploy 3 cutting-edge retail experiences utilizing motors, drivers, sensors, and C++. 
+                            Pioneered the creation of a tech-forward retail store, crafting 3 personalized encounters through proprietary software 
+                            aligned with the Software Development Life Cycle, while leveraging data analytics for user engagement tracking. Achieved 
+                            a remarkable cost reduction of ~40% by transitioning previously outsourced technologies in-house, ergo boosting profitability.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h2>Digital Technologies Intern</h2>
+                        <h3>Blue Rhine Industries</h3>
+                        <h4>August, 2020 - December, 2020</h4>
+                        <p>
+                            Engineered 4 advanced retail solutions by seamlessly integrating RFIDs, IR sensors, motors, Arduino, C++, Python, and content 
+                            management software, expanding service offerings for clientele. Presented pioneering technical solutions to over 10 stakeholders, 
+                            catalyzing the greenlighting of 8 high-value projects.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h2>Mechanical Engineering Intern</h2>
+                        <h3>AW Rostamani Group (Nissan & Infiniti)</h3>
+                        <h4>August, 2020 - December, 2020</h4>
+                        <p>
+                            Managed maintenance for 450+ Infiniti and Nissan vehicles within a compressed 3-week timeframe. Expertly resolved critical vehicle 
+                            issues by accessing and manipulating embedded electronic control units, effectively tackling complex engine complications that previously 
+                            rendered vehicles inoperable. Collaborated closely with experts for multiple successful resolutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h2>Corporate Operations Intern</h2>
+                        <h3>Aequs Pvt. Ltd.</h3>
+                        <h4>December, 2018 - January, 2019</h4>
+                        <p>
+                            Led operational optimization initiatives such as spearheading the digitalization of inventory management and automating mechanical equipment 
+                            audits, alongside a skilled team of 5 engineers. Achieved remarkable efficiency enhancements of up to 70% in targeted areas through strategic 
+                            digital initiatives.
+                        </p>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </div>
+
+    <!--Projects Section-->
+    <div id="projects">
+        <div class="container">
+            <h1 class="titles">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/HMS.png">
+                    <div class="layer">
+                        <p>
+                            Developed a complete and responsive hospital management system (HMS) using HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL that created a centralized platform 
+                            to manage operations, automate mundane processes, and enhance communication between various verticals. Each type of user had their own portal and respective 
+                            functionalities. The completion of this project streamlined logistics and improved patient care by digitizing record maintenance and operations, thus enabling 
+                            seamless communication between different stakeholders.
+                        </p>
+                        <a href="https://github.com/VivianHenry/Hospital-Management-System" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/NetflixDashboard.png">
+                    <div class="layer">
+                        <p>
+                            Created a dynamic data visualization dashboard on Tableau to analyze Netflix data. The dashboard focused on analyzing total titles by country and year, 
+                            distribution of movies and tv shows, top genres, and distribution of titles in various ratings, from both a global and local perspective. Information about 
+                            individual titles could also be filtered and visualized. The adopted visualization techniques included were area charts, bar graphs, histograms, heat maps, 
+                            geographical maps, and bubble charts.
+                        </p>
+                        <a href="https://public.tableau.com/app/profile/vivian.paul6658/viz/NetflixDashboard_17004981136970/Netflix" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/HateSpeechClassification.png">
+                    <div class="layer">
+                        <p>
+                            Developed a Python based classification system to analyze the sentiment of tweets and flag hate speech. Stages completed include data cleaning, data preprocessing, 
+                            preparation of training and testing datasets, sentiment analysis, algorithm implementation, and model comparison. Three classification algorithms (Naive Bayes, 
+                            Support Vector Machines, and Logistic Regression) were implemented and compared on the basis of precision, recall, and F1 score. The best performance was seen by the 
+                            Logistic Regression model with an accuracy of 95.59%.
+                        </p>
+                        <a href="https://github.com/VivianHenry/Hate-Speech-Classification-of-Tweets" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/HeartFailurePrediction.png">
+                    <div class="layer">
+                        <p>
+                            Imported, visualized, cleaned, transformed, and validated healthcare data to develop 7 differing machine learning models that predicted the occurrence of heart failure with 
+                            accuracies between 81% to 85%. The metrics used to evaluate the models were mean absolute error, accuracy, precision, recall, and F1-score. Additionally, a pipeline was created 
+                            to simplify the data preprocessing and modeling (Random Forest classifier) code.
+                        </p>
+                        <a href="https://www.kaggle.com/code/vivianhenrypaul/heart-failure-prediction" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/ASL.png">
+                    <div class="layer">
+                        <p>
+                            Developed a Python based system that recognized ASL gestures in real time by overlaying several landmarks upon the users hand and tracking the absolute and relative positions of these 
+                            landmarks. Adopting a modular structure, the system was divided into 4 independent subprograms. These subprograms were the creation of a hand tracking module, the interpretation of ASL 
+                            numbers, the interpretation of ASL letters, and eventually the formation of words using the fingerspelling method.
+                        </p>
+                        <a href="https://github.com/VivianHenry/American-Sign-Language-Recognition-Using-Computer-Vision" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/SupermarketSales.png">
+                    <div class="layer">
+                        <p>
+                            Developed a dynamic and interactive dashboard using HTML, CSS, JavaScript, PHP, MySQL, and D3.JS in order to visualize the sales data of 3 supermarket 
+                            branches. The data visualization techniques employed included area charts, stacked bar charts, grouped bar charts, scatterplot matrices, pie charts, and 
+                            stream graphs.
+                        </p>
+                        <a href="https://github.com/VivianHenry/Visualization-of-Supermarket-Sales" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/HousingMarketDashboard.png">
+                    <div class="layer">
+                        <p>
+                            Created a dynamic data visualization dashboard on Tableau to analyze real estate data. The project focused on tracking daily average house prices over 2 
+                            years in King County, Washington. The dashboard visualized the distribution of parameters such as view, no. of bedrooms, no. of bathrooms, etc., and analyzed 
+                            their impacts on prices. The adopted visualization techniques included line charts, bar graphs, histograms, heat maps, and geographical maps.
+                        </p>
+                        <a href="https://public.tableau.com/app/profile/vivian.paul6658/viz/HousingMarketDashboard_16996444361130/Final_Dashboard" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/EDA.png">
+                    <div class="layer">
+                        <p>
+                            Used NumPy, Pandas, Matplotlib, Seaborn, and Scikit-Learn to create a program that predicted the survival of passengers aboard the Titanic with an accuracy 
+                            of 77%. Exploratory data analysis was used and multiple models were trained and compared, to attain an optimal system. The Random Forest Classifier performed 
+                            best, delivering an accuracy of 79.33%.
+                        </p>
+                        <a href="https://www.kaggle.com/code/vivianhenrypaul/titanic-complete-data-science-solution" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/LowLevelImageProcessing.png">
+                    <div class="layer">
+                        <p>
+                            Employed MATLAB to practically implement various low-level image processing techniques and study their effects on images. These pre-processing techniques are a 
+                            pivotal first step into higher-level image processing techniques as it aims to handle undesirable characteristics, such as noise.
+                        </p>
+                        <a href="https://github.com/VivianHenry/Low-Level-Image-Processing" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/ImageFeatureDetection.png">
+                    <div class="layer">
+                        <p>
+                            Implemented various algorithms and methodologies, on MATLAB, related to identifying low-level features in an image, such as corners and edges, to subsequently 
+                            classify higher order image features such as lines. The techniques implemented include corner detection using Harris-Stephens algorithm, edge detection using Canny 
+                            algorithm, and Hough transform. The program was successful in identifying and highlighting such features in the test images.
+                        </p>
+                        <a href="https://github.com/VivianHenry/Image-Feature-Detection" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="projects-external-links">
+                <a href="https://github.com/VivianHenry" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                <a href="https://www.kaggle.com/vivianhenrypaul" target="_blank" rel="noopener noreferrer" class="btn">Kaggle</a>
+                <a href="https://public.tableau.com/app/profile/vivian.paul6658/vizzes" target="_blank" rel="noopener noreferrer" class="btn">Tableau</a>
+            </div> -->
+        </div>
+    </div>
+
+    <!--Certifications Section-->
+    <div id="certifications">
+        <div class="container">
+            <h1 class="titles">Certifications</h1>
+            <div class="certifications-list">
+                <div>
+                    <a href="https://www.linkedin.com/learning/certificates/591bc4dd814f6b5c84b33257de86c90a7a2ec13a9fce075d5e5673e19a63700f" target="_blank" rel="noopener noreferrer"><img src="images/LinkedinLogo.png"></a>
+                    <h2>Tableau Essential Training</h2>
+                    <h4>Issued November 2023</h4>
+                </div>
+                <div>
+                    <a href="https://www.kaggle.com/learn/certification/vivianhenrypaul/time-series" target="_blank" rel="noopener noreferrer"><img src="images/KaggleLogo.png"></a>
+                    <h2>Time Series</h2>
+                    <h4>Issued September 2023</h4>
+                </div>
+                <div>
+                    <a href="https://www.kaggle.com/learn/certification/vivianhenrypaul/intro-to-ai-ethics" target="_blank" rel="noopener noreferrer"><img src="images/KaggleLogo.png"></a>
+                    <h2>Intro to AI Ethics</h2>
+                    <h4>Issued July 2023</h4>
+                </div>
+                <div>
+                    <a href="https://www.kaggle.com/learn/certification/vivianhenrypaul/intermediate-machine-learning" target="_blank" rel="noopener noreferrer"><img src="images/KaggleLogo.png"></a>
+                    <h2>Intermediate Machine Learning</h2>
+                    <h4>Issued August 2022</h4>
+                </div>
+                <div>
+                    <a href="https://www.kaggle.com/learn/certification/vivianhenrypaul/data-cleaning" target="_blank" rel="noopener noreferrer"><img src="images/KaggleLogo.png"></a>
+                    <h2>Data Cleaning</h2>
+                    <h4>Issued May 2022</h4>
+                </div>
+                <div>
+                    <a href="https://www.kaggle.com/learn/certification/vivianhenrypaul/data-visualization" target="_blank" rel="noopener noreferrer"><img src="images/KaggleLogo.png"></a>
+                    <h2>Data Visualization</h2>
+                    <h4>Issued May 2022</h4>
+                </div>
+                <div>
+                    <a href="https://www.kaggle.com/learn/certification/vivianhenrypaul/intro-to-machine-learning" target="_blank" rel="noopener noreferrer"><img src="images/KaggleLogo.png"></a>
+                    <h2>Intro to Machine Learning</h2>
+                    <h4>Issued May 2022</h4>
+                </div>
+                <div>
+                    <a href="https://www.kaggle.com/learn/certification/vivianhenrypaul/pandas" target="_blank" rel="noopener noreferrer"><img src="images/KaggleLogo.png"></a>
+                    <h2>Pandas</h2>
+                    <h4>Issued May 2022</h4>
+                </div>
+                <div>
+                    <a href="https://www.kaggle.com/learn/certification/vivianhenrypaul/python" target="_blank" rel="noopener noreferrer"><img src="images/KaggleLogo.png"></a>
+                    <h2>Python</h2>
+                    <h4>Issued May 2022</h4>
+                </div>
+                <div>
+                    <a href="https://jovian.ai/certificate/MFQTMOBUGQ" target="_blank" rel="noopener noreferrer"><img src="images/JovianLogo.jpg"></a>
+                    <h2>Data Structures and Algorithms in Python</h2>
+                    <h4>Issued March 2022</h4>
+                </div>
+                <div>
+                    <a href="https://www.credly.com/badges/058f038f-58a7-4480-82f8-a1f857cd6194?source=linked_in_profile" target="_blank" rel="noopener noreferrer"><img src="images/IBMLogo.jpg"></a>
+                    <h2>Enterprise Design Thinking Practitioner</h2>
+                    <h4>Issued April 2021</h4>
+                </div>
+                <div>
+                    <a href="http://ude.my/UC-00204a27-b959-458a-9413-790f7836db94" target="_blank" rel="noopener noreferrer"><img src="images/UdemyLogo.png"></a>
+                    <h2>The Python Bible</h2>
+                    <h4>Issued July 2020</h4>
+                </div>
+                <div>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/C3CHDN6U8U29" target="_blank" rel="noopener noreferrer"><img src="images/StanfordLogo.jpg"></a>
+                    <h2>Machine Learning</h2>
+                    <h4>Issued October 2018</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact Section-->
+    <div class="fixed-bg contact">
+        <div id="contact">
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+            <div class="container">
+                <h1 class="titles">If you are looking for the next addition to your team, let's connect!</h1>
+                <div class="socials">
+                    <a href="mailto:vivianh7@gmail.com?subject=Contact Procured Through Portfolio"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/vivian-henry/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/VivianHenry"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Copyright Section-->
+    <div id="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> 2023. All Rights Reserved.</p>
+    </div>
+</body>
+
+<!--Included at the end to-ensure the targeted element is loaded before the event listener is attached.-->
+<script src="javascripts/custom.js"></script>
+
+</html>
